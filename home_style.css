@@ -14,9 +14,9 @@ body {
 	background-color: #D6EAF8;
 }
 .header { 
-	padding: 200px;
+	padding: 100px;
 	text-align: center;
-	background-image: url("https://dipompello.com/wp-content/uploads/2017/04/Authentic-Italian-Restaurant-Pompello-Dinner.jpg");
+	background-image: url("header_img.jpg");
 	color: blue;
 	font-size: 30px;
 } 
