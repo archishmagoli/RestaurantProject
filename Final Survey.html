@@ -1,14 +1,8 @@
+<!-- The code is ALMOST finished, just a few more things to sort out! -->
 <!DOCTYPE html> 
 <html> 
 	<head> 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script> 
-    $(document).ready(function(){
-    $("#flip").click(function(){
-    $("#panel").slideToggle("slow");
-   });
-  });
-</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	</head> 
 	<style>
 body {
@@ -97,171 +91,367 @@ h6 {
 }
 
 #panel {
-  padding: 50px;
+  display: none;
+}
+
+#panel2, #flip2 {
+  padding: 5px;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel2 {
+  display: none;
+}
+
+#panel3, #flip3 {
+  padding: 5px;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel3 {
+  display: none;
+}
+
+#panel4, #flip4 {
+  padding: 5px;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel4 {
+  display: none;
+}
+
+#panel5, #flip5 {
+  padding: 5px;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel5 {
+  display: none;
+}
+
+#panel6, #flip6 {
+  padding: 5px;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel6 {
+  display: none;
+}
+
+#panel7, #flip7 {
+  padding: 5px;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel7 {
+  display: none;
+}
+
+#panel8, #flip8 {
+  padding: 5px;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel8 {
+  display: none;
+}
+
+#panel9, #flip9 {
+  padding: 5px;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel9 {
+  display: none;
+}
+
+#panel10, #flip10 {
+  padding: 5px;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel10 {
   display: none;
 }
 
 </style>
 </head>
 <body>
-
-<h1> Restaurant Survey</h1>
-<h2 style="text-align:center;"> On a scale of 1 to 100: </h2>
-
-<form action="survey.cgi" method="POST"> 
-  <div id="flip"; style="background-color: dodgerblue;">Question 1</div>
-	<div id="panel"; style="background-color: dodgerblue;">
+<div style="text-align:center;"> 
+<h1> Restaurant Recommendation Survey</h1>
+<h2 id="test"> On a scale of 1 to 100: </h2>
+<p> Click each question to view and answer it. </p> 
+</div> 
+<form onsubmit="return false;">  
+  <div id="flip"; style="background-color: dodgerblue; text-align:center;">Question 1 </div>
+	<div id="panel"; style="background-color: dodgerblue; text-align:center;">
    1. How adventurous are you when it comes to food? <br>
    - 1 = not at all adventurous <br>
   - 100 = very adventurous 
-  <br> 
-  <p>  
+  <br>   
   <div class="slidecontainer">
     <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
     <p> Value: <span id="demo"></span></p>
   </div>
   </div>
+  <br> 
+  <div style="text-align:center;"> 
+  <div id="flip2"; style="background-color: dodgerblue;">Question 2 </div>
+	<div id="panel2"; style="background-color: dodgerblue;">
   2. How much do you typically spend when you eat out? <br> 
     - 1 = $1 <br>
-    - 100 = $100 or more 
-  <p>  
+    - 100 = $100 or more  
   <div class="slidecontainer">
     <input type="range" min="1" max="100" value="50" class="slider" id="myRange2">
     <p> Value: <span id="demo2"></span></p>
   </div>
+  </div>
+  <br> 
+  <div id="flip3"; style="background-color: dodgerblue;">Question 3 </div>
+	<div id="panel3"; style="background-color: dodgerblue;">
   3. How spicy do you like your food? <br> 
     - 1 = very mild <br>
-    - 100 = extremely spicy 
-  <p>  
+    - 100 = extremely spicy  
   <div class="slidecontainer">
     <input type="range" min="1" max="100" value="50" class="slider" id="myRange3">
     <p> Value: <span id="demo3"></span></p>
   </div>
+  </div> 
+  <br> 
+  <div id="flip4"; style="background-color: dodgerblue;">Question 4 </div>
+	<div id="panel4"; style="background-color: dodgerblue;">
   4. How much do you enjoy European cuisine? <br> 
     - 1 = not at all <br>
-    - 100 = very much 
-  <p>  
+    - 100 = very much  
   <div class="slidecontainer">
     <input type="range" min="1" max="100" value="50" class="slider" id="myRange4">
     <p> Value: <span id="demo4"></span></p>
   </div>
+  </div> 
+  <br> 
+  <div id="flip5"; style="background-color: dodgerblue;">Question 5 </div>
+	<div id="panel5"; style="background-color: dodgerblue;">
   5. How much do you enjoy African cuisine? <br> 
     - 1 = not at all <br>
-    - 100 = very much
-  <p>  
+    - 100 = very much  
   <div class="slidecontainer">
     <input type="range" min="1" max="100" value="50" class="slider" id="myRange5">
     <p> Value: <span id="demo5"></span></p>
   </div>
+  </div>
+  <br>  
+  <div id="flip6"; style="background-color: dodgerblue;">Question 6 </div>
+	<div id="panel6"; style="background-color: dodgerblue;">
   6. How much do you enjoy Asian cuisine? <br> 
     - 1 = not at all <br>
-    - 100 = very much
-  <p>  
+    - 100 = very much 
   <div class="slidecontainer">
     <input type="range" min="1" max="100" value="50" class="slider" id="myRange6">
     <p> Value: <span id="demo6"></span></p>
   </div>
+  </div>
+  <br>  
+  <div id="flip7"; style="background-color: dodgerblue;">Question 7 </div>
+	<div id="panel7"; style="background-color: dodgerblue;">
   7. How much do you enjoy South/Central American cuisine? <br> 
     - 1 = not at all <br>
-    - 100 = very much
-  <p>  
+    - 100 = very much 
   <div class="slidecontainer">
     <input type="range" min="1" max="100" value="50" class="slider" id="myRange7">
     <p> Value: <span id="demo7"></span></p>
   </div>
+  </div> 
+  <br> 
+  <div id="flip8"; style="background-color: dodgerblue;">Question 8 </div>
+	<div id="panel8"; style="background-color: dodgerblue;">
   8. How much do you enjoy North American cuisine? <br> 
     - 1 = not at all <br>
-    - 100 = very much
-  <p>  
+    - 100 = very much 
   <div class="slidecontainer">
     <input type="range" min="1" max="100" value="50" class="slider" id="myRange8">
     <p> Value: <span id="demo8"></span></p>
   </div>
+  </div>
+  <br>  
+  <div id="flip9"; style="background-color: dodgerblue;">Question 9 </div>
+	<div id="panel9"; style="background-color: dodgerblue;">
     9. Are you vegetarian, vegan, or neither? ONLY select one of the following values below: <br> 
     - 1 = vegetarian <br>
     - 50 = vegan <br> 
-    - 100 = none 
-  <p>  
+    - 100 = none  
   <div class="slidecontainer">
     <input type="range" min="1" max="100" value="50" class="slider" id="myRange9">
     <p> Value: <span id="demo9"></span></p>
   </div>
+  </div> 
+  <br> 
+  <div id="flip10"; style="background-color: dodgerblue;">Question 10 </div>
+	<div id="panel10"; style="background-color: dodgerblue;">
   10. Are you a healthy eater? ONLY select one of the following values below: <br> 
     - 1 = Yes, always <br>
     - 50 = Sometimes <br> 
     - 100 = Never 
-  <p>  
   <div class="slidecontainer">
     <input type="range" min="1" max="100" value="50" class="slider" id="myRange10">
     <p> Value: <span id="demo10"></span></p>
   </div>
-
-<script>
-
-var slider = document.getElementById("myRange");
-var slider_2 = document.getElementById("myRange2");
-var slider_3 = document.getElementById("myRange3");
-var slider_4 = document.getElementById("myRange4");
-var slider_5 = document.getElementById("myRange5");
-var slider_6 = document.getElementById("myRange6");
-var slider_7 = document.getElementById("myRange7");
-var slider_8 = document.getElementById("myRange8");
-var slider_9 = document.getElementById("myRange9");
-var slider_10 = document.getElementById("myRange10");
-
-var output = document.getElementById("demo");
-var output_2 = document.getElementById("demo2");
-var output_3 = document.getElementById("demo3");
-var output_4 = document.getElementById("demo4");
-var output_5 = document.getElementById("demo5");
-var output_6 = document.getElementById("demo6");
-var output_7 = document.getElementById("demo7");
-var output_8 = document.getElementById("demo8");
-var output_9 = document.getElementById("demo9");
-var output_10 = document.getElementById("demo10"); 
-
-
-output.innerHTML = slider.value;
-
-slider.oninput = function() {
-  output.innerHTML = this.value;
-}
-slider_2.oninput = function() {
-  output_2.innerHTML = this.value;
-}
-
-slider_3.oninput = function() {
-  output_3.innerHTML = this.value;
-}
-
-slider_4.oninput = function() {
-  output_4.innerHTML = this.value;
-}
-
-slider_5.oninput = function() {
-  output_5.innerHTML = this.value;
-}
-
-slider_6.oninput = function() {
-  output_6.innerHTML = this.value;
-}
-
-slider_7.oninput = function() {
-  output_7.innerHTML = this.value;
-}
-
-slider_8.oninput = function() {
-  output_8.innerHTML = this.value;
-}
-
-slider_9.oninput = function() {
-  output_9.innerHTML = this.value;
-}
-
-slider_10.oninput = function() {
-  output_10.innerHTML = this.value;
-}
-</script>
-
+  </div> 
+  <br> 
+  <button onclick="submitFunction();"> Click Me </button> 
+  </div> 
+  <br> 
+  </form> 
 </body>
+<script> 
+  $(document).ready(function() { 
+  $("#flip").click(function() {
+  $("#panel").slideToggle("slow");
+    });
+  });
+  $(document).ready(function(){
+    $("#flip2").click(function(){
+    $("#panel2").slideToggle("slow");
+   });
+  });
+  $(document).ready(function(){
+    $("#flip3").click(function(){
+    $("#panel3").slideToggle("slow");
+   });
+  });
+  $(document).ready(function(){
+    $("#flip4").click(function(){
+    $("#panel4").slideToggle("slow");
+   });
+  });
+  $(document).ready(function(){
+    $("#flip5").click(function(){
+    $("#panel5").slideToggle("slow");
+   });
+  });
+  $(document).ready(function(){
+    $("#flip6").click(function(){
+    $("#panel6").slideToggle("slow");
+   });
+  });
+  $(document).ready(function(){
+    $("#flip7").click(function(){
+    $("#panel7").slideToggle("slow");
+   });
+  });
+  $(document).ready(function(){
+    $("#flip8").click(function(){
+    $("#panel8").slideToggle("slow");
+   });
+  });
+  $(document).ready(function(){
+    $("#flip9").click(function(){
+    $("#panel9").slideToggle("slow");
+   });
+  });
+  $(document).ready(function(){
+    $("#flip10").click(function(){
+    $("#panel10").slideToggle("slow");
+   });
+  });
+  var slider = document.getElementById("myRange");
+  var slider_2 = document.getElementById("myRange2");
+  var slider_3 = document.getElementById("myRange3");
+  var slider_4 = document.getElementById("myRange4");
+  var slider_5 = document.getElementById("myRange5");
+  var slider_6 = document.getElementById("myRange6");
+  var slider_7 = document.getElementById("myRange7");
+  var slider_8 = document.getElementById("myRange8");
+  var slider_9 = document.getElementById("myRange9");
+  var slider_10 = document.getElementById("myRange10");
+
+  var output = document.getElementById("demo");
+  var output_2 = document.getElementById("demo2");
+  var output_3 = document.getElementById("demo3");
+  var output_4 = document.getElementById("demo4");
+  var output_5 = document.getElementById("demo5");
+  var output_6 = document.getElementById("demo6");
+  var output_7 = document.getElementById("demo7");
+  var output_8 = document.getElementById("demo8");
+  var output_9 = document.getElementById("demo9");
+  var output_10 = document.getElementById("demo10");
+
+
+  slider.oninput = function() {
+    output.innerHTML = this.value;
+  }
+
+  slider_2.oninput = function() {
+    output_2.innerHTML = this.value;
+  }
+
+  slider_3.oninput = function() {
+    output_3.innerHTML = this.value;
+  }
+
+  slider_4.oninput = function() {
+    output_4.innerHTML = this.value;
+  }
+
+  slider_5.oninput = function() {
+    output_5.innerHTML = this.value;
+  }
+
+  slider_6.oninput = function() {
+    output_6.innerHTML = this.value;
+  }
+
+  slider_7.oninput = function() {
+    output_7.innerHTML = this.value;
+  }
+
+  slider_8.oninput = function() {
+    output_8.innerHTML = this.value;
+  }
+
+  slider_9.oninput = function() {
+    output_9.innerHTML = this.value;
+  }
+
+  slider_10.oninput = function() {
+    output_10.innerHTML = this.value;
+  }
+
+  output.innerHTML = slider.value;
+  output_2.innerHTML = slider_2.value;
+  output_3.innerHTML = slider_3.value;
+  output_4.innerHTML = slider_4.value;
+  output_5.innerHTML = slider_5.value;
+  output_6.innerHTML = slider_6.value;
+  output_7.innerHTML = slider_7.value;
+  output_8.innerHTML = slider_8.value;
+  output_9.innerHTML = slider_9.value;
+  output_10.innerHTML = slider_10.value;
+
+
+  var questions = ["Question 1", "Question 2", "Question 3", "Question 4", "Question 5", "Question 6", "Question 7", "Question 8", "Question 9", "Question 10"]
+
+  var userdict = {};  
+  
+  function submitFunction() { 
+	alert("Received submit"); 
+	alert(questions); 
+  var answer_list = [slider.value, slider_2.value, slider_3.value, slider_4.value, slider_5.value, slider_6.value, slider_7.value, slider_8.value, slider_9.value, slider_10.value];  
+	alert(answer_list); 
+	for (i = 0; i < questions.length; i++) { 
+		userdict[questions[i]] = answer_list[i]; 
+	} console.log(userdict); 
+}; 
+
+  
+</script>
 </html>
