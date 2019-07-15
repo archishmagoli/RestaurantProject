@@ -124,7 +124,11 @@ class Signup(RequestHandler):
             print(e)
             print("Bad Request")
             self.redirect('/')
-            
+class Search(RequestHandler):
+    def get(self):
+        self.render('Search.html')
+    def post(self):
+        self.redirect('/')
 application = tornado.web.Application([
     (r"/", MainH),
     (r"/Start", StartH),
@@ -132,6 +136,7 @@ application = tornado.web.Application([
     (r"/Login", Login),
     (r"/Home", Home),
     (r"/Signup", Signup),
+    (r"/Search", Search),
     (r'/js/(.*)', web.StaticFileHandler),
     (r'/css/(.*)', web.StaticFileHandler),
     (r'/images/(.*)', web.StaticFileHandler),
