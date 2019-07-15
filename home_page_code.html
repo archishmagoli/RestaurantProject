@@ -1,21 +1,34 @@
 <html>
+<head>
 	<title> WashBasin Food Finder</title>
 	<meta charset="UTF-8">
+	<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.bundle.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
 	<link rel="stylesheet" href="home_style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css" /> 
+
+<!-- #377795, #8CA8B6, #FFE2C1, #ECA450 -->
+<!-- #377795, #8CA8B6, #F5934B, #CD6529 -->
+
 <style>
 	body {
 	width: 100wh;
 	height: 90vh;
-	color: #fff;
-	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	color: #fff;                  
+	background: linear-gradient(-45deg, #F3DC32, #64A8AE, #C1ED87, #F0A52B);
 	background-size: 400% 400%;
 	-webkit-animation: Gradient 10s ease infinite;
 	animation: Gradient 10s ease infinite;
 	}
-
 	@-webkit-keyframes Gradient {
 		0% {
 			background-position: 0% 50%
@@ -27,8 +40,6 @@
 			background-position: 0% 50%
 		}
 	}
-
-
 	@keyframes Gradient {
 		0% {
 			background-position: 0% 50%
@@ -40,7 +51,6 @@
 			background-position: 0% 50%
 		}
 	}
-
 	h1,
 	h6 {
 		font-family: 'Open Sans';
@@ -49,23 +59,72 @@
 		right: 0;
 		left: 0;
 	}
+	
+	#logo {
+	float: right;
+		width: 10%;
+		height: auto;
+		overflow: auto;
+		vertical-align: middle;
+	}
+	
+	#topbar {
+		width: auto;
+		height: auto;
+		background: white;
+		margin: auto;
+		overflow: auto;
+		box-shadow: 5px 5px #888888;
+	}
+	
+	#menu {
+		padding-top: 35px;
+	}
+	
+	#companyName {
+		display: inline; 
+		padding-left: 850px; 
+		padding-top: 27px;
+		color: #9E8719;
+		position: absolute;
+	}
+	#topbar a {
+		font-family: Open Sans;
+		color: black;
+		float: left;
+		padding: 20px;
+	}
+	.menubtn1 {
+		font-family: Open Sans;
+		color: black;
+		float: left;
+		margin: 20px;
+		width: 300px;
+		height: 50px;
+		padding-left: 30px;
+	}
+	#topbar a:hover {
+		background-color: black;	
+	}
+	.menubtn2 {
+		font-family: Open Sans;
+		color: black;
+		float: left;
+		margin: 20px;
+		width: 100px;
+		height: 50px;
+		padding-left: 30px 30px;
+	}
+	
 	</style> 
-<body>
+</head>
+<body id = "body">
 
-<!-- Sidebar (hidden by default) -->
-<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()"
-  class="w3-bar-item w3-button" style="color: black;">Close Menu</a>
-  <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button" style="color: black;">Survey</a>
-  <a href="startup.html" onclick="w3_close()" class="w3-bar-item w3-button" style="color: black;">Login or Create an Account</a>
-</nav>
-
-<!-- Top menu -->
-<div class="w3-top">
-  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
-    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
-    <div class="w3-center w3-padding-16" style="font-family: Times New Roman; font-weight: bold; font-size:30px;"> !WELP! </div>
-  </div>
+<div id = "topbar">
+	<h2 class = "menubtn1"><a href="startup.html">Login/Sign Up</a></h2>
+	<h2 class = "menubtn2"><a href="#food">Survey</a></h2>	
+	<h1 id = "companyName"> Welp </h1> 
+	<img id = "logo" src = "logo.png">
 </div>
   
 <!-- !PAGE CONTENT! -->
@@ -76,7 +135,6 @@
 
 <div style="text-align:center;"> 
 	<h1> </h1> 
-	<button class="button" onclick="window.location.href = 'login_page.html';"> Login </button> 
 	<h1> Trending Restaurants </h1> 
 </div> 
 
@@ -108,7 +166,7 @@
     <div class="w3-third">
       <h3>About</h3>
       <p>Just a group of kids making a web survey at a coding camp. We are all in high school and had to make this for a project.<br>
-      Archie, Kai, Roshan, Shreya, & Harshith </p>
+      Harshith, Harshith, Roshan, Harshith, & Harshith </p>
       <p>Powered by <a href="https://www.tagedonline.org/futureready-coding-camp/" target="_blank">TAG-Ed & Lexis Nexis Risk Solutions</a></p>
     </div>
 
