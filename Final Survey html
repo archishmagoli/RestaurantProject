@@ -1,0 +1,267 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script> 
+    $(document).ready(function(){
+    $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+   });
+  });
+</script>
+	</head> 
+	<style>
+body {
+  width: 100wh;
+  height: 90vh;
+  color: #fff;
+  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  background-size: 800% 800%;
+  -webkit-animation: Gradient 10s ease infinite;
+  animation: Gradient 10s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+h1,
+h6 {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  text-align: center;
+  right: 0;
+  left: 0;
+}
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+#panel, #flip {
+  padding: 5px;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+
+</style>
+</head>
+<body>
+
+<h1> Restaurant Survey</h1>
+<h2 style="text-align:center;"> On a scale of 1 to 100: </h2>
+
+<form action="survey.cgi" method="POST"> 
+  <div id="flip"; style="background-color: dodgerblue;">Question 1</div>
+	<div id="panel"; style="background-color: dodgerblue;">
+   1. How adventurous are you when it comes to food? <br>
+   - 1 = not at all adventurous <br>
+  - 100 = very adventurous 
+  <br> 
+  <p>  
+  <div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+    <p> Value: <span id="demo"></span></p>
+  </div>
+  </div>
+  2. How much do you typically spend when you eat out? <br> 
+    - 1 = $1 <br>
+    - 100 = $100 or more 
+  <p>  
+  <div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange2">
+    <p> Value: <span id="demo2"></span></p>
+  </div>
+  3. How spicy do you like your food? <br> 
+    - 1 = very mild <br>
+    - 100 = extremely spicy 
+  <p>  
+  <div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange3">
+    <p> Value: <span id="demo3"></span></p>
+  </div>
+  4. How much do you enjoy European cuisine? <br> 
+    - 1 = not at all <br>
+    - 100 = very much 
+  <p>  
+  <div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange4">
+    <p> Value: <span id="demo4"></span></p>
+  </div>
+  5. How much do you enjoy African cuisine? <br> 
+    - 1 = not at all <br>
+    - 100 = very much
+  <p>  
+  <div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange5">
+    <p> Value: <span id="demo5"></span></p>
+  </div>
+  6. How much do you enjoy Asian cuisine? <br> 
+    - 1 = not at all <br>
+    - 100 = very much
+  <p>  
+  <div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange6">
+    <p> Value: <span id="demo6"></span></p>
+  </div>
+  7. How much do you enjoy South/Central American cuisine? <br> 
+    - 1 = not at all <br>
+    - 100 = very much
+  <p>  
+  <div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange7">
+    <p> Value: <span id="demo7"></span></p>
+  </div>
+  8. How much do you enjoy North American cuisine? <br> 
+    - 1 = not at all <br>
+    - 100 = very much
+  <p>  
+  <div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange8">
+    <p> Value: <span id="demo8"></span></p>
+  </div>
+    9. Are you vegetarian, vegan, or neither? ONLY select one of the following values below: <br> 
+    - 1 = vegetarian <br>
+    - 50 = vegan <br> 
+    - 100 = none 
+  <p>  
+  <div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange9">
+    <p> Value: <span id="demo9"></span></p>
+  </div>
+  10. Are you a healthy eater? ONLY select one of the following values below: <br> 
+    - 1 = Yes, always <br>
+    - 50 = Sometimes <br> 
+    - 100 = Never 
+  <p>  
+  <div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange10">
+    <p> Value: <span id="demo10"></span></p>
+  </div>
+
+<script>
+
+var slider = document.getElementById("myRange");
+var slider_2 = document.getElementById("myRange2");
+var slider_3 = document.getElementById("myRange3");
+var slider_4 = document.getElementById("myRange4");
+var slider_5 = document.getElementById("myRange5");
+var slider_6 = document.getElementById("myRange6");
+var slider_7 = document.getElementById("myRange7");
+var slider_8 = document.getElementById("myRange8");
+var slider_9 = document.getElementById("myRange9");
+var slider_10 = document.getElementById("myRange10");
+
+var output = document.getElementById("demo");
+var output_2 = document.getElementById("demo2");
+var output_3 = document.getElementById("demo3");
+var output_4 = document.getElementById("demo4");
+var output_5 = document.getElementById("demo5");
+var output_6 = document.getElementById("demo6");
+var output_7 = document.getElementById("demo7");
+var output_8 = document.getElementById("demo8");
+var output_9 = document.getElementById("demo9");
+var output_10 = document.getElementById("demo10"); 
+
+
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+slider_2.oninput = function() {
+  output_2.innerHTML = this.value;
+}
+
+slider_3.oninput = function() {
+  output_3.innerHTML = this.value;
+}
+
+slider_4.oninput = function() {
+  output_4.innerHTML = this.value;
+}
+
+slider_5.oninput = function() {
+  output_5.innerHTML = this.value;
+}
+
+slider_6.oninput = function() {
+  output_6.innerHTML = this.value;
+}
+
+slider_7.oninput = function() {
+  output_7.innerHTML = this.value;
+}
+
+slider_8.oninput = function() {
+  output_8.innerHTML = this.value;
+}
+
+slider_9.oninput = function() {
+  output_9.innerHTML = this.value;
+}
+
+slider_10.oninput = function() {
+  output_10.innerHTML = this.value;
+}
+</script>
+
+</body>
+</html>
