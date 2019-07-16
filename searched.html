@@ -84,7 +84,7 @@ h6 {
 <center>
 {%for i item in items%}
 <h2>{{escape(i[0])}}<h2>
-<img style="width:512px;height:512px;" class='img' src="{escape(i[1])}" alt="HTML5 Icon" />
+<img style="width:512px;height:512px;" class='img' src="{{escape(i[1])}}" alt="HTML5 Icon" />
 <a href={escape(i[2])}>Right Result? Click Here!</a>
 {% end %}
 
