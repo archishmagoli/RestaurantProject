@@ -1,0 +1,23 @@
+<!-- In order to make the button for the login and sign up pages, assign the button with an id of "lgnbtn". Then, use this code. -->
+
+
+
+<button type="submit" id = "lgnbtn">Login</button> <p>    </p>
+
+#lgnbtn {
+		padding: 10px 12px;
+		border: 3px solid #64A8AE;
+		border-radius: 40px;
+		font-family: Open Sans;
+		font-style: bold;
+		color: white;
+		background-color: #C1ED87;
+		position: relative;
+		margin-left: 60px;
+	}
+	
+	#lgnbtn:hover {
+	
+		background-color: #F3DC32;
+		
+	}
