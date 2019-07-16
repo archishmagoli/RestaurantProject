@@ -1,0 +1,37 @@
+import time;
+
+userdict = {}
+questionBank = ["What is your favorite food? ", "What is your favorite sport? ", "What is your favorite color? ", "What is your favorite mobile brand? ", "What is your favorite footwear brand? "]
+answer = True
+
+while (answer == True):
+  qAndADict = {}
+  ans = input("Would you like to take a survey about what you like? ")
+  while True:
+    if (ans.lower() == "yes" or ans.lower() == "no"):
+      break;
+    else: 
+      ans = input("Please enter a valid input: ");
+  if (ans.lower() == "no"):
+    answer = False;
+    break;
+
+  time.sleep(1);
+  print ("\nI'm going to start with some generic questions about you.")
+  name = input("\nWhat is your name? ")
+  print("Hi " + name + " , it's nice to meet you!\n")
+
+  #Survey Questions and storing inputs
+  n = 1;
+  while (n <= len(questionBank)):
+    response = input("\n" + questionBank[n - 1]);
+    qAndADict[questionBank[n-1]] = response
+    n = n + 1
+
+
+  #Store on parent dictionary
+  print ("\nProcessing...\n")
+  time.sleep(3)
+  print ("\nThank you for your input!\n")
+  userdict[name] = qAndADict
+print (userdict.items())
