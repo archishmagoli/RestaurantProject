@@ -3,6 +3,7 @@
 	<head>
 		<title>My Slander</title>
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,800&display=swap" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	</head>
 	<body>
 	<style>
@@ -70,6 +71,7 @@
 			-webkit-transition: .2s; 
 			transition: opacity .2s;
 			border-radius: 10px;
+			margin-bottom: 15px;
 		}
 		.slider : hover {
 			opacity: 1;
@@ -90,30 +92,36 @@
 			border: 0;
 			background: #ADD8E6;
 			box-shadow: none;
-			outline: none;
-			
+			outline: none;	
+		}
+		h3 {
+			font-weight: 400px;
+			font-size: 20px;
 		}
 	</style>
-	<script>
-		var slider = document.getElementById("myRange");
-		var output = document.getElementById("demo");
-		output.innerHTML = slider.value;
 
-		slider.oninput = function() {
-		  output.innerHTML = this.value;
-		}
-	</script>
 		<h1>Food Settings</h1>
 		<div id = "info">
 			<img src = "https://s3-media2.fl.yelpcdn.com/bphoto/qVPVucqc2VlQkmfd_LA-vw/o.jpg" id = "food">
 			<h2>Thai Time<br>Address: 504 Thai Lane<br>Phone Number: 678-THAI-ME1</h2>
 		</div>
 		<div id = "rater">
+			<h3>Rate our restaurant!</h3>
 			<form>
-			<input type = "range" min = "1" max = "100" value = "50" class = "slider" id = "myRange">
+			  <input type="range" min="1" max="5" value="3" class="slider" id="myRange">
 			<input type = submit id = "submit">
 			</form>
-			<p>Current value: <span id = demo></span></p>
+			<p>Value: <span id="demo"></span></p>
 		</div>
+		
+		<script>
+			var slider = document.getElementById("myRange");
+			var output = document.getElementById("demo");
+			output.innerHTML = slider.value;
+
+			slider.oninput = function() {
+			  output.innerHTML = this.value;
+			}
+		</script>
 	</body>
 </html>
