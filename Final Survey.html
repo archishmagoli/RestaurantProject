@@ -1,4 +1,3 @@
-<!-- The code is ALMOST finished, just a few more things to sort out! -->
 <!DOCTYPE html> 
 <html> 
 	<head> 
@@ -307,7 +306,7 @@ h6 {
   </div>
   </div> 
   <br> 
-  <button onclick="submitFunction();"> Click Me </button> 
+  <button onclick="submitFunction();"> Submit Survey </button> 
   </div> 
   <br> 
   </form> 
@@ -436,22 +435,13 @@ h6 {
   output_8.innerHTML = slider_8.value;
   output_9.innerHTML = slider_9.value;
   output_10.innerHTML = slider_10.value;
-
-
-  var questions = ["Question 1", "Question 2", "Question 3", "Question 4", "Question 5", "Question 6", "Question 7", "Question 8", "Question 9", "Question 10"]
-
-  var userdict = {};  
   
   function submitFunction() { 
-	alert("Received submit"); 
-	alert(questions); 
-  var answer_list = [slider.value, slider_2.value, slider_3.value, slider_4.value, slider_5.value, slider_6.value, slider_7.value, slider_8.value, slider_9.value, slider_10.value];  
-	alert(answer_list); 
-	for (i = 0; i < questions.length; i++) { 
-		userdict[questions[i]] = answer_list[i]; 
-	} console.log(userdict); 
-}; 
-
-  
+	  alert("Received submit"); 
+    var answer_list = [slider.value, slider_2.value, slider_3.value, slider_4.value, slider_5.value, slider_6.value, slider_7.value, slider_8.value, slider_9.value, slider_10.value];  
+    for (var x = 0; x < answer_list.length; x++) { 
+      answer_list[x] = Number(answer_list[x]); 
+    };  
+  };   
 </script>
 </html>
