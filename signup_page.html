@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="login_page.css">
+<!-- Latest compiled and minified CSS --> 
+<link rel="stylesheet" type="text/css" href="final_survey.css"/> 
 
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -10,19 +10,16 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.bundle.js"></script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
 
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css" /> 
-
+   
 </head>
 
 <body>
-
-
-
-
   <!-- Modal Content -->
   <form class="modal-content animate" action="" method="post">
     <div class="imgcontainer">
@@ -36,19 +33,261 @@
 	  <br><br>
 
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-	  
+      <input type="password" placeholder="Enter Password" name="psw" required> 
 	  <br><br>
 
-      <button type="submit">Sign Up</button> <p>    </p>
+     <p>    </p>
     </div> </center>
 
     
   </form>
 </div>
-
-
-
+<div style="text-align:center; color: #fff;"> 
+  <p style="text-align:center; text-decoration:underline; font-size: 20px;"> Complete the survey to finish signing up! </p> 
+<h1> Restaurant Recommendation Survey</h1>
+<h2 id="test"> On a scale of 1 to 100: </h2>
+<p> Click each question to view and answer it. </p> 
+</div> 
+<form onsubmit="return false;" style="color: white;">  
+  <div id="flip"; style="background-color: dodgerblue; text-align:center;">Question 1 </div>
+	<div id="panel"; style="background-color: dodgerblue; text-align:center;">
+   1. How adventurous are you when it comes to food? <br>
+   - 1 = not at all adventurous <br>
+  - 100 = very adventurous 
+  <br>   
+  <div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+    <p> Value: <span id="demo"></span></p>
+  </div>
+  </div>
+  <br> 
+  <div style="text-align:center;"> 
+  <div id="flip2"; style="background-color: dodgerblue;">Question 2 </div>
+	<div id="panel2"; style="background-color: dodgerblue;">
+  2. How much do you typically spend when you eat out? <br> 
+    - 1 = $1 <br>
+    - 100 = $100 or more  
+  <div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange2">
+    <p> Value: <span id="demo2"></span></p>
+  </div>
+  </div>
+  <br> 
+  <div id="flip3"; style="background-color: dodgerblue;">Question 3 </div>
+	<div id="panel3"; style="background-color: dodgerblue;">
+  3. How spicy do you like your food? <br> 
+    - 1 = very mild <br>
+    - 100 = extremely spicy  
+  <div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange3">
+    <p> Value: <span id="demo3"></span></p>
+  </div>
+  </div> 
+  <br> 
+  <div id="flip4"; style="background-color: dodgerblue;">Question 4 </div>
+	<div id="panel4"; style="background-color: dodgerblue;">
+  4. How much do you enjoy European cuisine? <br> 
+    - 1 = not at all <br>
+    - 100 = very much  
+  <div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange4">
+    <p> Value: <span id="demo4"></span></p>
+  </div>
+  </div> 
+  <br> 
+  <div id="flip5"; style="background-color: dodgerblue;">Question 5 </div>
+	<div id="panel5"; style="background-color: dodgerblue;">
+  5. How much do you enjoy African cuisine? <br> 
+    - 1 = not at all <br>
+    - 100 = very much  
+  <div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange5">
+    <p> Value: <span id="demo5"></span></p>
+  </div>
+  </div>
+  <br>  
+  <div id="flip6"; style="background-color: dodgerblue;">Question 6 </div>
+	<div id="panel6"; style="background-color: dodgerblue;">
+  6. How much do you enjoy Asian cuisine? <br> 
+    - 1 = not at all <br>
+    - 100 = very much 
+  <div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange6">
+    <p> Value: <span id="demo6"></span></p>
+  </div>
+  </div>
+  <br>  
+  <div id="flip7"; style="background-color: dodgerblue;">Question 7 </div>
+	<div id="panel7"; style="background-color: dodgerblue;">
+  7. How much do you enjoy South/Central American cuisine? <br> 
+    - 1 = not at all <br>
+    - 100 = very much 
+  <div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange7">
+    <p> Value: <span id="demo7"></span></p>
+  </div>
+  </div> 
+  <br> 
+  <div id="flip8"; style="background-color: dodgerblue;">Question 8 </div>
+	<div id="panel8"; style="background-color: dodgerblue;">
+  8. How much do you enjoy North American cuisine? <br> 
+    - 1 = not at all <br>
+    - 100 = very much 
+  <div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange8">
+    <p> Value: <span id="demo8"></span></p>
+  </div>
+  </div>
+  <br>  
+  <div id="flip9"; style="background-color: dodgerblue;">Question 9 </div>
+	<div id="panel9"; style="background-color: dodgerblue;">
+    9. Are you vegetarian, vegan, or neither? ONLY select one of the following values below: <br> 
+    - 1 = vegetarian <br>
+    - 50 = vegan <br> 
+    - 100 = none  
+  <div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange9">
+    <p> Value: <span id="demo9"></span></p>
+  </div>
+  </div> 
+  <br> 
+  <div id="flip10"; style="background-color: dodgerblue;">Question 10 </div>
+	<div id="panel10"; style="background-color: dodgerblue;">
+  10. Are you a healthy eater? ONLY select one of the following values below: <br> 
+    - 1 = Yes, always <br>
+    - 50 = Sometimes <br> 
+    - 100 = Never 
+  <div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange10">
+    <p> Value: <span id="demo10"></span></p>
+  </div>
+  </div> 
+  <br> 
+  <button type="submit" onclick="submitFunction();"> Submit Survey and Sign up </button> 
+  </div> 
+  <br> 
+  </form> 
+</body>
+<script> 
+  $(document).ready(function() { 
+  $("#flip").click(function() {
+  $("#panel").slideToggle("slow");
+    });
+  });
+  $(document).ready(function(){
+    $("#flip2").click(function(){
+    $("#panel2").slideToggle("slow");
+   });
+  });
+  $(document).ready(function(){
+    $("#flip3").click(function(){
+    $("#panel3").slideToggle("slow");
+   });
+  });
+  $(document).ready(function(){
+    $("#flip4").click(function(){
+    $("#panel4").slideToggle("slow");
+   });
+  });
+  $(document).ready(function(){
+    $("#flip5").click(function(){
+    $("#panel5").slideToggle("slow");
+   });
+  });
+  $(document).ready(function(){
+    $("#flip6").click(function(){
+    $("#panel6").slideToggle("slow");
+   });
+  });
+  $(document).ready(function(){
+    $("#flip7").click(function(){
+    $("#panel7").slideToggle("slow");
+   });
+  });
+  $(document).ready(function(){
+    $("#flip8").click(function(){
+    $("#panel8").slideToggle("slow");
+   });
+  });
+  $(document).ready(function(){
+    $("#flip9").click(function(){
+    $("#panel9").slideToggle("slow");
+   });
+  });
+  $(document).ready(function(){
+    $("#flip10").click(function(){
+    $("#panel10").slideToggle("slow");
+   });
+  });
+  var slider = document.getElementById("myRange");
+  var slider_2 = document.getElementById("myRange2");
+  var slider_3 = document.getElementById("myRange3");
+  var slider_4 = document.getElementById("myRange4");
+  var slider_5 = document.getElementById("myRange5");
+  var slider_6 = document.getElementById("myRange6");
+  var slider_7 = document.getElementById("myRange7");
+  var slider_8 = document.getElementById("myRange8");
+  var slider_9 = document.getElementById("myRange9");
+  var slider_10 = document.getElementById("myRange10");
+  var output = document.getElementById("demo");
+  var output_2 = document.getElementById("demo2");
+  var output_3 = document.getElementById("demo3");
+  var output_4 = document.getElementById("demo4");
+  var output_5 = document.getElementById("demo5");
+  var output_6 = document.getElementById("demo6");
+  var output_7 = document.getElementById("demo7");
+  var output_8 = document.getElementById("demo8");
+  var output_9 = document.getElementById("demo9");
+  var output_10 = document.getElementById("demo10");
+  slider.oninput = function() {
+    output.innerHTML = this.value;
+  }
+  slider_2.oninput = function() {
+    output_2.innerHTML = this.value;
+  }
+  slider_3.oninput = function() {
+    output_3.innerHTML = this.value;
+  }
+  slider_4.oninput = function() {
+    output_4.innerHTML = this.value;
+  }
+  slider_5.oninput = function() {
+    output_5.innerHTML = this.value;
+  }
+  slider_6.oninput = function() {
+    output_6.innerHTML = this.value;
+  }
+  slider_7.oninput = function() {
+    output_7.innerHTML = this.value;
+  }
+  slider_8.oninput = function() {
+    output_8.innerHTML = this.value;
+  }
+  slider_9.oninput = function() {
+    output_9.innerHTML = this.value;
+  }
+  slider_10.oninput = function() {
+    output_10.innerHTML = this.value;
+  }
+  output.innerHTML = slider.value;
+  output_2.innerHTML = slider_2.value;
+  output_3.innerHTML = slider_3.value;
+  output_4.innerHTML = slider_4.value;
+  output_5.innerHTML = slider_5.value;
+  output_6.innerHTML = slider_6.value;
+  output_7.innerHTML = slider_7.value;
+  output_8.innerHTML = slider_8.value;
+  output_9.innerHTML = slider_9.value;
+  output_10.innerHTML = slider_10.value;
+  
+  function submitFunction() { 
+	  alert("Received submit"); 
+    var answer_list = [slider.value, slider_2.value, slider_3.value, slider_4.value, slider_5.value, slider_6.value, slider_7.value, slider_8.value, slider_9.value, slider_10.value];  
+    for (var x = 0; x < answer_list.length; x++) { 
+      answer_list[x] = Number(answer_list[x]); 
+    };  
+  };   
+</script>
 
 <footer>
 	<h5 style = "text-align: center; font-family: Open Sans; color: gray;">Powered by the one and only <a href="lexisnexis.com">LEXISNEXIS RISK SOLUTIONS</a></h5>	
