@@ -65,50 +65,67 @@
 		width: 10%;
 		height: auto;
 		overflow: auto;
-		align: center;
+		vertical-align: middle;
 	}
 	
 	#topbar {
-		width: 1200px;
+		width: auto;
 		height: auto;
 		background: white;
 		margin: auto;
-		padding-top: 10px;
 		overflow: auto;
+		box-shadow: 5px 5px #888888;
 	}
 	
-	#x :hover {
-		color: red;
+	#menu {
+		padding-top: 35px;
+	}
+	
+	#companyName {
+		display: inline; 
+		padding-left: 850px; 
+		padding-top: 27px;
+		color: #9E8719;
+		position: absolute;
+	}
+	#topbar a {
+		font-family: Open Sans;
+		color: black;
+		float: left;
+		padding: 20px;
+	}
+	.menubtn1 {
+		font-family: Open Sans;
+		color: black;
+		float: left;
+		margin: 20px;
+		width: 300px;
+		height: 50px;
+		padding-left: 30px;
+	}
+	#topbar a:hover {
+		background-color: black;	
+	}
+	.menubtn2 {
+		font-family: Open Sans;
+		color: black;
+		float: left;
+		margin: 20px;
+		width: 100px;
+		height: 50px;
+		padding-left: 30px 30px;
 	}
 	
 	</style> 
 </head>
 <body id = "body">
 
-<!-- Sidebar (hidden by default) -->
-<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;max-width: 370px" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()"
-  class="w3-bar-item w3-button" id = "x" style="color: black; text-align: right;"> X </a>
-  <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button" style="color: black;">Survey</a>
-  <a href="startup.html" onclick="w3_close()" class="w3-bar-item w3-button" style="color: black;">Login or Create an Account</a>
-</nav>
-
-<!-- Top menu -->
-<!-- <div class="w3-top">
-  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
-    <div class="w3-button w3-padding-12 w3-third" onclick="w3_open()"> ☰ </div>
-    <div class="w3-center w3-padding-12 w3-third"> <h1> Welp </h1> </div>
-	<div class = "w3-center w3-padding-12 w3-third" style = "width: 150%"> <img id = "logo" src = "logo.png"> </div>
-  </div>
+<div id = "topbar">
+	<h2 class = "menubtn1"><a href="startup.html">Login/Sign Up</a></h2>
+	<h2 class = "menubtn2"><a href="#food">Survey</a></h2>	
+	<h1 id = "companyName"> Welp </h1> 
+	<img id = "logo" src = "logo.png">
 </div>
-
--->
-
-<div id = "topbar" class = "w3-white w3-xlarge">
-	<div class="w3-button w3-padding-12 w3-left" id = "menu" onclick="w3_open()" style = "color: #9E8719;" > ☰ </div>
-	<h1 style = "display: inline; padding-left: 500px; color: #9E8719;"> Welp </h1> <img id = "logo" src = "logo.png">
-</div>
-
   
 <!-- !PAGE CONTENT! -->
 <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
@@ -129,7 +146,7 @@
       <p>Chick-fil-A is the largest chicken, and the third largest American fast food restaurant chain, whose specialty is chicken sandwiches. Their headquarters are in College Park, Georgia and they were founded in May 1946.</p>
     </div>
     <div class="w3-quarter">
-      <img src="http://www.eightsushiatl.com/wp-content/uploads/2015/05/Approved-8-Sushi-Logo.jpg" alt="Eight" style="width:75%">
+      <img src="https://s3-media3.fl.yelpcdn.com/bphoto/W9Arvo10WZ78PS7KdQHkHQ/o.jpg" alt="Eight" style="width:75%">
       <h3> Eight Sushi Lounge</h3>
       <p>Japanese fare with creative, contemporary touches served in a modern space sporting slick design.</p>
     </div>
@@ -181,3 +198,4 @@ function w3_close() {
 
 </body>
 </html>
+
