@@ -16,6 +16,60 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css" /> 
 
+<style>
+body {
+	width: 100wh;
+	height: 90vh;
+	color: #fff;
+	background: linear-gradient(-45deg, #F3DC32, #64A8AE, #C1ED87, #F0A52B);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 10s ease infinite;
+	animation: Gradient 10s ease infinite;
+	}
+	@-webkit-keyframes Gradient {
+		0% {
+			background-position: 0% 50%
+		}
+		50% {
+			background-position: 100% 50%
+		}
+		100% {
+			background-position: 0% 50%
+		}
+	}
+	@keyframes Gradient {
+		0% {
+			background-position: 0% 50%
+		}
+		50% {
+			background-position: 100% 50%
+		}
+		100% {
+			background-position: 0% 50%
+		}
+	}
+	
+	#sgnupbtn {
+		padding: 10px 12px;
+		border: 3px solid #64A8AE;
+		border-radius: 40px;
+		font-family: Open Sans;
+		font-style: bold;
+		color: white;
+		background-color: #C1ED87;
+		position: relative;
+		margin-left: 60px;
+	}
+	
+	#sgnupbtn:hover {
+	
+		background-color: #F3DC32;
+		
+	}
+	
+</style>
+
+
 </head>
 
 <body>
@@ -24,9 +78,9 @@
 
 
   <!-- Modal Content -->
-  <form class="modal-content animate" action="" method="post">
+  <form class="modal-content animate" action="login_page.html">
     <div class="imgcontainer">
-      <center><img src="danes.jpg" alt="Avatar" class="avatar" style = width: "20px;" height: "20px;"></center>
+      <center>
     </div>
 
     <center><div class="container">
@@ -40,7 +94,7 @@
 	  
 	  <br><br>
 
-      <button type="submit">Sign Up</button> <p>    </p>
+      <button type="submit" id = "sgnupbtn" >Sign Up</button> <p>    </p>
     </div> </center>
 
     
@@ -49,10 +103,10 @@
 
 
 
-
 <footer>
-	<h5 style = "text-align: center; font-family: Open Sans; color: gray;">Powered by the one and only <a href="lexisnexis.com">LEXISNEXIS RISK SOLUTIONS</a></h5>	
+	<h5 style = "text-align: center; font-family: Open Sans; color: white;">Powered by the one and only <a href="lexisnexis.com">LEXISNEXIS RISK SOLUTIONS</a></h5>	
 </footer>
+
 
 </body>
 </html>
