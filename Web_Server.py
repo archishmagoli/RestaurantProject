@@ -154,15 +154,15 @@ class Home(RequestHandler):
             		border-radius: 10px;
             		font-family: Open Sans;
             		font-style: bold;
-            		color: white;
-            		background-color: #C1ED87;
+            		color: black;
+            		background-color: white;
             		position: relative;
             		margin-left: 705px;
             	}
             	
             	#logged_in_btn:hover {
             	
-            		background-color: #F3DC32;
+            		background-color: orange;
             		
             	}
             </style>
@@ -238,9 +238,10 @@ class Searched(RequestHandler):
             
             message = '''
                  <head>
-                
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css" /> 
                 <style>
                 body {
+                    font-family: Open Sans;
                 	width: 100wh;
                 	height: 90vh;
                 	color: #fff;
@@ -318,21 +319,21 @@ class Searched(RequestHandler):
             		border-radius: 40px;
             		font-family: Open Sans;
             		font-style: bold;
-            		color: white;
-            		background-color: #C1ED87;
+            		color: black;
+            		background-color: white;
             		position: relative;
             	}
             	
             	#btn:hover {
             	
-            		background-color: #F3DC32;
+            		background-color: orange;
 		
 	               }
                 </style>
                 
                 </head>
                 
-                <h1 id='welcome_text'>Search Results:</h1>
+                <h1 id="welcome_text">Search Results:</h1>
                 
                 <br>
                 <center>
@@ -385,7 +386,7 @@ class Rpage(RequestHandler):
     def get(self):
         message = '''
                          <head>
-                
+                        <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap" type="text/css">
                 <style>
                 body {
                 	width: 100wh;
@@ -395,6 +396,7 @@ class Rpage(RequestHandler):
                 	background-size: 400% 400%;
                 	-webkit-animation: Gradient 10s ease infinite;
                 	animation: Gradient 10s ease infinite;
+                    font-family: Open Sans;
                 }
                 
                 @-webkit-keyframes Gradient {
@@ -424,7 +426,7 @@ class Rpage(RequestHandler):
                 
                 h1,
                 h6 {
-                	font-family: 'Open Sans';
+                	font-family: Open Sans;
                 	font-weight: 300;
                 	text-align: center;
                 	padding-top: 200px;
@@ -465,14 +467,14 @@ class Rpage(RequestHandler):
             		border-radius: 40px;
             		font-family: Open Sans;
             		font-style: bold;
-            		color: white;
-            		background-color: #C1ED87;
+            		color: black;
+            		background-color: white;
             		position: relative;
             	}
             	
             	#btn:hover {
             	
-            		background-color: #F3DC32;
+            		background-color: orange;
 		
 	               }
                 
@@ -482,7 +484,7 @@ class Rpage(RequestHandler):
                 
                 </head>
                 
-                <h1 id='welcome_text'>Restaurant Details:</h1>
+                <h1 id="welcome_text">Restaurant Details:</h1>
                 
                 <br>
                 <center>
